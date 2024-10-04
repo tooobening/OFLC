@@ -1,7 +1,7 @@
 # Web Map Application for GIS Specialist Prevailing Wage Levels from PERM in the U.S.A 
 
 ## Overview
-This project aims to create an interactive web application that displays the prevailing wage levels for the job title "Geographic Information Systems (GIS) Specialist (SOC Code: 15-1299)" provided by the Department of Labor (DOL) for each county in the United States. The application will feature an interactive map of the US, allowing users to click on a county to view a bar chart showing four different wage levels.
+This project aims to create an interactive web application that displays the [prevailing wage levels](https://flag.dol.gov/wage-data/wage-search) for the job title "Geographic Information Systems (GIS) Specialist (SOC Code: 15-1299)" provided by the Department of Labor (DOL) for each county in the United States. The application will feature an interactive map of the US, allowing users to click on a county to view a bar chart showing four different wage levels.
 
 ## Purpose
 The primary goal of this application is to assist international GIS professionals interested in employer-based sponsorship in the USA. By providing detailed wage information regulated by the Department of Labor, users can better understand the minimum wage levels in their respective areas.
