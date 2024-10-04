@@ -31,8 +31,7 @@ Code Overview
 1. Saving a GeoDataFrame as a Shapefile
 The following function saves a GeoDataFrame as a shapefile in a specified directory:
 
-python
-Copy code
+```python
 def save_shapefile_within_dir(gdf, shapefile_name):
     """
     Saves a GeoDataFrame as a shapefile in a directory named after the shapefile.
@@ -47,11 +46,10 @@ def save_shapefile_within_dir(gdf, shapefile_name):
     output_shapefile = os.path.join(output_directory, shapefile_name + '.shp')
     gdf.to_file(output_shapefile, driver='ESRI Shapefile')
     print(f'Shapefile saved at: {output_shapefile}')
+
 2. Loading Data
 Load a shapefile and a CSV file to create a GeoDataFrame:
-
-python
-Copy code
+```Python
 # Load shapefile
 zip_file_path = "C://Projects//OFLC//Data//us-county-boundaries.zip"
 gdf = gpd.read_file(f"zip://{zip_file_path}")
@@ -61,14 +59,12 @@ df = pd.read_csv('C://Projects//OFLC//Data//CSV//Geography.csv')
 3. Data Merging
 Combine data from the shapefile and CSV using a left join:
 
-python
-Copy code
+```python
 merged_gdf = gdf.merge(df, left_on=['namelsad', 'stusab'], right_on=['CountyTownName', 'StateAb'], how='left')
 4. Data Cleaning and Conversion
 Modify the columns to keep relevant information and convert data types as necessary:
 
-python
-Copy code
+```python
 # Convert 'Area' to integer
 merged_gdf['Area'] = merged_gdf['Area'].apply(safe_int_convert)
 Usage
@@ -79,13 +75,10 @@ Contributing
 Contributions are welcome! If you have suggestions for improvements or new features, feel free to open an issue or submit a pull request.
 
 License
-This project is licensed under the MIT License. See the LICENSE file for details.
 
 Acknowledgments
 Department of Labor (DOL) for providing wage data.
 GeoPandas Documentation for geographic data handling.
-csharp
-Copy code
 
 ### Notes:
 - Make sure to adjust the paths and other project-specific details as needed.
