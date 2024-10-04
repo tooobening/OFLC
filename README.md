@@ -27,7 +27,6 @@ To run this project, you need to have the following Python packages installed. Y
 
 ```bash
 pip install geopandas pandas numpy matplotlib plotly
-Code Overview
 1. Saving a GeoDataFrame as a Shapefile
 The following function saves a GeoDataFrame as a shapefile in a specified directory:
 
