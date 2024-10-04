@@ -1,0 +1,82 @@
+(function() {
+    var texts = {
+        'en': {
+            'h': 'Your browser is not supported',
+            'p1': "You are currently using an obsolete browser that doesn't support modern technologies used on many " +
+                  "websites, including this one. As such, you may experience an inferior experience while browsing, " +
+                   "and possibly broken features.",
+            'p2': "We encourage you to use one of the supported browsers:"
+        },
+        'fr': {
+            'h': "Votre navigateur n'est plus supporté",
+            'p1': "Vous utilisez actuellement un navigateur obsolète qui ne supporte pas certaines technologies " +
+                  "modernes utilisées sur de nombreux sites, dont celui-ci. Cela risque d'affecter votre navigation, " +
+                  "notamment en rendant inutilisable certaines fonctionnalités.",
+            'p2': "Nous vous encourageons à utiliser un des navigateurs supportés :"
+        }
+
+    };
+
+    // Only displays if referrer is not from the same host
+    if (window.document.referrer.indexOf(window.location.host) === -1) {
+        // Checking for WebGL support is a quick way to detect old browsers
+        // However, IE11 supports WebGL, but all IE versions have `document.documentMode`
+        if (!window.WebGLRenderingContext || document.documentMode) {
+            var userLang = navigator.language || navigator.userLanguage;
+            var msgs = texts.en;
+            if (userLang.substring(0, 2) === 'fr') {
+                msgs = texts.fr;
+            }
+
+            // Show warning
+            var container = document.createElement('div');
+            container.className = 'ods-supported-browsers-message';
+            container.innerHTML = '<div class="ods-supported-browsers-message">' +
+                '<button type="button" class="ods-supported-browsers-message__close">&times;</button>' +
+                '<h2></h2>' +
+                '<p class="ods-supported-browsers-message__message ods-supported-browsers-message__message--p1"></p>' +
+                '<p class="ods-supported-browsers-message__message ods-supported-browsers-message__message--p2"></p>' +
+                '<div class="ods-supported-browsers-message__supported-browsers">' +
+                '   <div class="ods-supported-browsers-message__browser">' +
+                '       <a href="https://www.mozilla.org/firefox/new/" target="_blank">' +
+                '           <img src="/static/ods/img/browserlogos/firefox_64x64.png">' +
+                '           <p>Firefox</p>' +
+                '       </a>' +
+                '   </div>' +
+                '   <div class="ods-supported-browsers-message__browser">' +
+                '       <a href="http://www.google.com/chrome/" target="_blank">' +
+                '           <img src="/static/ods/img/browserlogos/chrome_64x64.png">' +
+                '           <p>Chrome</p>' +
+                '       </a>' +
+                '   </div>' +
+                '   <div class="ods-supported-browsers-message__browser">' +
+                '       <a href="http://www.apple.com/safari/" target="_blank">' +
+                '           <img src="/static/ods/img/browserlogos/safari_64x64.png">' +
+                '           <p>Safari</p>' +
+                '       </a>' +
+                '   </div>' +
+                '   <div class="ods-supported-browsers-message__browser">' +
+                '       <a href="https://www.microsoft.com/edge" target="_blank">' +
+                '           <img src="/static/ods/img/browserlogos/edge_64x64.png">' +
+                '           <p>Edge</p>' +
+                '       </a>' +
+                '   </div>' +
+                '</div>' +
+                '</div>';
+            container.getElementsByTagName('h2')[0].innerHTML = msgs.h;
+            container.querySelectorAll('.ods-supported-browsers-message__message--p1')[0].innerHTML = msgs.p1;
+            container.querySelectorAll('.ods-supported-browsers-message__message--p2')[0].innerHTML = msgs.p2;
+
+            document.body.appendChild(container);
+
+            var listener = function() {
+                document.body.removeChild(container);
+            };
+            if (document.addEventListener) {
+                container.querySelectorAll('.ods-supported-browsers-message__close')[0].addEventListener('click', listener);
+            } else {
+                container.querySelectorAll('.ods-supported-browsers-message__close')[0].attachEvent('onclick', listener);
+            }
+        }
+    }
+}());

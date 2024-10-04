@@ -1,0 +1,189 @@
+/*
+  Icon Font: odsui
+*/
+
+@font-face {
+  font-family: "odsui";
+  src: url("./odsui_a6c660798103edff985716512c73c808.eot");
+  src: url("./odsui_a6c660798103edff985716512c73c808.eot?#iefix") format("embedded-opentype"),
+       url("./odsui_a6c660798103edff985716512c73c808.woff2") format("woff2"),
+       url("./odsui_a6c660798103edff985716512c73c808.woff") format("woff"),
+       url("./odsui_a6c660798103edff985716512c73c808.ttf") format("truetype"),
+       url("./odsui_a6c660798103edff985716512c73c808.svg#odsui") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "odsui";
+    src: url("./odsui_a6c660798103edff985716512c73c808.svg#odsui") format("svg");
+  }
+}
+
+[data-icon]:before { content: attr(data-icon); }
+
+[data-icon]:before,
+.odsui-add:before,
+.odsui-bars:before,
+.odsui-basemap:before,
+.odsui-bottom:before,
+.odsui-caption:before,
+.odsui-configuration:before,
+.odsui-copy:before,
+.odsui-dataset:before,
+.odsui-dataset_group:before,
+.odsui-delete:before,
+.odsui-delete_light:before,
+.odsui-description:before,
+.odsui-dot_border_opacity_max:before,
+.odsui-dot_border_opacity_mini:before,
+.odsui-dot_opacity_max:before,
+.odsui-dot_opacity_mini:before,
+.odsui-dot_size_big:before,
+.odsui-dot_size_medium:before,
+.odsui-dot_size_small:before,
+.odsui-dot_thickness_max:before,
+.odsui-dot_thickness_mini:before,
+.odsui-edit:before,
+.odsui-folder:before,
+.odsui-folder-open:before,
+.odsui-group:before,
+.odsui-home:before,
+.odsui-left:before,
+.odsui-link:before,
+.odsui-list:before,
+.odsui-location:before,
+.odsui-maps_empty:before,
+.odsui-marker_border_opacity_max:before,
+.odsui-marker_border_opacity_mini:before,
+.odsui-marker_opacity_max:before,
+.odsui-marker_opacity_mini:before,
+.odsui-marker_size_max:before,
+.odsui-marker_size_medium:before,
+.odsui-marker_size_mini:before,
+.odsui-marker_thickness_max:before,
+.odsui-marker_thickness_mini:before,
+.odsui-move:before,
+.odsui-odslogo:before,
+.odsui-paste:before,
+.odsui-remove:before,
+.odsui-reset:before,
+.odsui-right:before,
+.odsui-save:before,
+.odsui-search:before,
+.odsui-share:before,
+.odsui-sign_in:before,
+.odsui-sign_out:before,
+.odsui-split:before,
+.odsui-style:before,
+.odsui-tooltips:before,
+.odsui-top:before,
+.odsui-valid:before,
+.odsui-valid_white:before,
+.odsui-visibility_off:before,
+.odsui-visibility_on:before,
+.odsui-visual_options:before,
+.odsui-widget:before,
+.odsui-zoom_less:before,
+.odsui-zoom_plus:before {
+  display: inline-block;
+  font-family: "odsui";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.odsui-add:before { content: "\f100"; }
+.odsui-bars:before { content: "\f101"; }
+.odsui-basemap:before { content: "\f102"; }
+.odsui-bottom:before { content: "\f103"; }
+.odsui-caption:before { content: "\f104"; }
+.odsui-configuration:before { content: "\f105"; }
+.odsui-copy:before { content: "\f106"; }
+.odsui-dataset:before { content: "\f107"; }
+.odsui-dataset_group:before { content: "\f108"; }
+.odsui-delete:before { content: "\f109"; }
+.odsui-delete_light:before { content: "\f10a"; }
+.odsui-description:before { content: "\f10b"; }
+.odsui-dot_border_opacity_max:before { content: "\f10c"; }
+.odsui-dot_border_opacity_mini:before { content: "\f10d"; }
+.odsui-dot_opacity_max:before { content: "\f10e"; }
+.odsui-dot_opacity_mini:before { content: "\f10f"; }
+.odsui-dot_size_big:before { content: "\f110"; }
+.odsui-dot_size_medium:before { content: "\f111"; }
+.odsui-dot_size_small:before { content: "\f112"; }
+.odsui-dot_thickness_max:before { content: "\f113"; }
+.odsui-dot_thickness_mini:before { content: "\f114"; }
+.odsui-edit:before { content: "\f115"; }
+.odsui-folder:before { content: "\f116"; }
+.odsui-folder-open:before { content: "\f117"; }
+.odsui-group:before { content: "\f118"; }
+.odsui-home:before { content: "\f119"; }
+.odsui-left:before { content: "\f11a"; }
+.odsui-link:before { content: "\f11b"; }
+.odsui-list:before { content: "\f11c"; }
+.odsui-location:before { content: "\f11d"; }
+.odsui-maps_empty:before { content: "\f11e"; }
+.odsui-marker_border_opacity_max:before { content: "\f11f"; }
+.odsui-marker_border_opacity_mini:before { content: "\f120"; }
+.odsui-marker_opacity_max:before { content: "\f121"; }
+.odsui-marker_opacity_mini:before { content: "\f122"; }
+.odsui-marker_size_max:before { content: "\f123"; }
+.odsui-marker_size_medium:before { content: "\f124"; }
+.odsui-marker_size_mini:before { content: "\f125"; }
+.odsui-marker_thickness_max:before { content: "\f126"; }
+.odsui-marker_thickness_mini:before { content: "\f127"; }
+.odsui-move:before { content: "\f128"; }
+.odsui-odslogo:before { content: "\f129"; }
+.odsui-paste:before { content: "\f12a"; }
+.odsui-remove:before { content: "\f12b"; }
+.odsui-reset:before { content: "\f12c"; }
+.odsui-right:before { content: "\f12d"; }
+.odsui-save:before { content: "\f12e"; }
+.odsui-search:before { content: "\f12f"; }
+.odsui-share:before { content: "\f130"; }
+.odsui-sign_in:before { content: "\f131"; }
+.odsui-sign_out:before { content: "\f132"; }
+.odsui-split:before { content: "\f133"; }
+.odsui-style:before { content: "\f134"; }
+.odsui-tooltips:before { content: "\f135"; }
+.odsui-top:before { content: "\f136"; }
+.odsui-valid:before { content: "\f137"; }
+.odsui-valid_white:before { content: "\f138"; }
+.odsui-visibility_off:before { content: "\f139"; }
+.odsui-visibility_on:before { content: "\f13a"; }
+.odsui-visual_options:before { content: "\f13b"; }
+.odsui-widget:before { content: "\f13c"; }
+.odsui-zoom_less:before { content: "\f13d"; }
+.odsui-zoom_plus:before { content: "\f13e"; }
+
+
+/* RTL For icons that require to be turned */
+html[dir=rtl] .odsui-bars:before,
+html[dir=rtl] .odsui-caption:before,
+html[dir=rtl] .odsui-description:before,
+html[dir=rtl] .odsui-edit:before,
+html[dir=rtl] .odsui-folder:before,
+html[dir=rtl] .odsui-folder-open:before,
+html[dir=rtl] .odsui-group:before,
+html[dir=rtl] .odsui-left:before,
+html[dir=rtl] .odsui-link:before,
+html[dir=rtl] .odsui-list:before,
+html[dir=rtl] .odsui-location:before,
+html[dir=rtl] .odsui-right:before,
+html[dir=rtl] .odsui-share:before,
+html[dir=rtl] .odsui-sign_in:before,
+html[dir=rtl] .odsui-sign_out:before,
+html[dir=rtl] .odsui-split:before,
+html[dir=rtl] .odsui-style:before,
+html[dir=rtl] .odsui-tooltips:before {
+  transform: scale(-1, 1);
+}

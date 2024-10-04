@@ -1,0 +1,2 @@
+window.ODSTranslations=window.ODSTranslations || {};
+Object.entries({}).forEach(([key, value]) => { window.ODSTranslations[key] = {...window.ODSTranslations[key], ...value}; });

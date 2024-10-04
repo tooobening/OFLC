@@ -1,0 +1,517 @@
+
+    :root {
+        --text: #565656;
+--links: #0086D6;
+--titles: #000000;
+--page-background: #F6F8FB;
+--highlight: #0086D6;
+--boxes-background: #FFFFFF;
+--boxes-border: #DEE5EF;
+--section-titles: #000000;
+--section-titles-background: #F6F8FB;
+--header-background: #142E7B;
+--header-links: #FFFFFF;
+--footer-background: #FFFFFF;
+--footer-links: #000000;
+    }
+    
+
+/* ==========================================================================
+LIGHT BASIC HEADER THEME
+========================================================================== */
+/* 
+The CSS rules below apply to the whole portal.
+Some suggestions:
+- You should add below CSS rules that apply to elements that show up in all pages (such as the 
+header or footer) or built-in pages such as the Explore page, the MapBuilder, the ChartBuilder and the API 
+page.
+- For CSS that applies to a specific user-created page, add it directly in the "CSS" 
+tab in the page edit section. This makes it easier to keep track of which classes 
+are page specific and which ones are generic and apply to the whole portal.
+*/
+/* Portal Header - Logo and main navigation
+========================================================================== */
+.portal-header {
+    padding: 0 26px 0 13px;
+    border-bottom: 1px solid #DEE5EF;
+}
+/* Logo */
+.ods-front-header__logo {
+    display: block;
+    width: 172px; /* Logo width */
+    height: auto; /* Logo height */
+    max-height: 48px;
+    padding-left: 13px;
+    margin-right: 65px;
+}
+.ods-responsive-menu-collapsible__content {
+    display: flex;
+    align-items: center;
+}
+.portal-navigation {
+    margin: 0;
+    flex: 1 1 auto;
+}
+.ods-front-header__menu {
+    margin: 0;
+}
+.ods-front-header__menu-item-link {
+    border: none;
+    font-size: .733rem;
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    line-height: 59px;
+    padding: 0 13px;
+    opacity: 1;
+}
+.ods-front-header__menu-item-link:hover,
+.ods-front-header__menu-item-link--active {
+    background-color: #0086D6;
+    color: #FFFFFF; /* Header link color when the link is active */
+}
+/* Management Menu
+========================================================================== */
+.ods-front-header__management-menu {
+    position: static;
+    top: auto;
+    right: auto;
+    line-height: 59px;
+    font-size: .833rem;
+}
+.ods-front-header__management-menu-item {
+    margin: 0 0 0 26px;
+}
+.ods-front-header__management-menu-item-link--active, 
+.ods-front-header__management-menu-item-link:hover {
+    border: none;
+    color: #0086D6;
+}
+.ods-front-header__account-avatar-container {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+.ods-front-header__management-menu-item--backoffice {
+    padding: 0;
+    border: none;
+    background: none;
+}
+/* Button "Back Office" in header */
+.ods-front-header__management-menu-item--backoffice .ods-front-header__management-menu-item-link--backoffice {
+    display: inline-block;
+    color: #0086D6;
+    border: 1px solid #0086D6;
+    padding: 5px;
+    background-color: white;  
+    border-radius: 4px;
+}
+.ods-front-header__management-menu-item-link--backoffice:hover {
+    color: #FFFFFF;
+    background-color: #0086D6;
+}
+.ods-front-header__management-menu-item-link {
+    padding-bottom: 0;
+}
+/* Header - Mobile (small screens)
+========================================================================== */
+.ods-responsive-menu-placeholder.ods-responsive-menu-placeholder--active {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.ods-responsive-menu--collapsed .ods-responsive-menu-collapsible__content {
+    align-items: flex-start;
+    flex-direction: column;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__menu-item-link {
+    width: 100%;
+    border-left: none;
+}
+.ods-responsive-menu-collapsible--collapsed .portal-navigation,
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__menu,
+.ods-responsive-menu-collapsible--collapsed .portal-management-menu {
+    width: 100%;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__logo {
+    display: none;
+}
+/* Management Menu - Mobile (small screens)
+========================================================================== */
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu {
+    padding: 13px;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu-item {
+    padding-left: 0;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu-item--backoffice {
+    padding: 0;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu-item-link--backoffice {
+    display: inline-flex;
+    align-items: center;
+}
+/* Portal Footer
+========================================================================== */
+.portal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #DEE5EF;
+    background-color: #FFFFFF;
+    height: auto;
+    min-height: 50px;
+    padding: 0 26px;
+}
+.ods-front-footer__link--active {
+    font-weight: normal;
+    color: #0086D6; /* Give current language a color highlight */
+}
+/* Explore Page - Catalog Cards
+========================================================================== */
+.ods-catalog-card {
+    border-radius: 4px;
+    padding: 26px;
+    transition: all .2s;
+}
+.ods-catalog-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px 0 #e3e9f1;
+}
+.ods-catalog-card:hover:before {
+    display: none;
+}
+.ods-catalog-card__theme-icon {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+}
+.ods-catalog-card__title {
+    color: #0086D6;
+    font-weight: 400;
+    font-size: 1.44rem;
+    line-height: 1.2;
+}
+.ods-catalog-card__metadata-item {
+    font-size: .833rem;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+.ods-catalog-card__visualization {
+    color: #565656;
+    padding: 0 0 4px 0;
+}
+.ods-catalog-card__keyword {
+    color: #565656;
+    font-size: 0.833rem;
+    padding: .15rem .35rem;
+    background-color: #DEE5EF;
+    border-radius: 7px;
+}
+.ods-catalog-card__keyword:hover {
+    color: #FFFFFF;
+    background-color: #142E7B;
+}
+/* Explore Page - Filter Sidebar
+========================================================================== */
+/* Improve sidebar title size and alignement */
+.ods-filters__count, 
+.ods-filters__export-catalog-title, 
+.ods-filters__filters, 
+.ods-filters__filters-summary{
+    font-size: 1.44rem;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 0;
+    margin-bottom: 13px;
+}
+.ods-catalog-sort-labels {
+    font-size: .833rem;
+    line-height: 1.4;
+}
+.odswidget-facet__facet-title {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-bottom: 13px;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+.odswidget-text-search__search-box {
+    font-size: 1rem;
+}
+/* Catalog Sort Selector */
+.ods-catalog-sort__selector {
+    font-size: .833rem;
+}
+.ods-catalog-sort__selector__opt,
+.ods-catalog-sort__selector__opt--select .ods-catalog-sort__selector__more-button {
+    background-color: #F6F8FB;
+    border-color: #142E7B;
+    color: #142E7B;
+}
+.ods-catalog-sort__selector__opt--selected,
+.ods-catalog-sort__selector__opt--selected:hover,
+.ods-catalog-sort__selector__opt:hover:not(.ods-catalog-sort__selector__opt--selected), 
+.ods-catalog-sort__selector__opt:hover:not(.ods-catalog-sort__selector__opt--selected) button {
+    color: #FFFFFF;
+    background-color: #142E7B;
+    border-color: #142E7B;
+}
+/* Removed small left border from sidebar items */
+.odswidget-facet__category,
+.ods-filters__export-catalog-link {
+    /*padding-left: 0; or else little "+" are mixed with facet items */
+    border: none;
+}
+
+/* ==========================================================================
+CUSTOM CSS VIEW
+========================================================================== */
+/* DATASETS */ 
+
+.deprecation-message {
+    border: 0.45rem solid #CE0037;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.indication-message {
+    border: 0.45rem solid #0086D6;
+    border-radius: 0.25rem;
+    padding: 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+
+/* SECTIONS & LAYOUT */
+body {
+    /*font-size: 1rem;*/
+    /* background-color: #FFF; */ /* todo: check general theme */
+    /*line-height: 1.6;*/
+    /*font-weight: 300;*/
+}
+
+.page-header { 
+    /* checked for conflicts with default */
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-section {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    box-shadow: 0 15px 13px -15px rgba(100,100,100,0.2);
+}
+
+.page-title, .page-title2 {
+    color: #142E7B;
+    text-align:center;
+    position: relative;
+    vertical-align: bottom;
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.5rem; /* todo: or 2rem? */
+    border-radius: 7px 7px 0 0;
+    padding-bottom: 1.5rem;
+}
+
+.page-title2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.page-subtitle {
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #142E7B;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #142E7B;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+/* CUSTOM CSS FOR DASHBOARDS */
+
+.cardblock {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #FFFFFF;
+    background-clip: border-box;
+    border: 1px solid rgba(72, 94, 144, 0.16);
+    border-radius: 0.25rem;
+}
+
+.cardblock-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+.cardblock-title {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-weight: 350;
+    display:block;
+}
+
+.cardblock-value {
+    color: #142E7B;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 1.53125rem;
+}
+
+.cardblock-desc {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #142E7B;
+    margin-bottom: 0;
+    font-weight: 650;
+    font-size: 0.95rem;
+}
+
+.cardblock-descsub {
+    font-size: 0.75rem;
+    color: #8392a5;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.cardblock-descsub-kpi {
+    color: #6b7d94;   
+    font-weight: 600;
+}
+
+.cardblock-valuesub {
+    color: #142E7B;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+.icon-box {
+    display: flex;
+    font-size: 5em;
+    align-items: center;
+}    
+
+.cardblock-desc-icon-up {
+    color: red;
+    font-weight: 800;
+    font-size: 1.6rem;
+    vertical-align: bottom;
+}
+
+.cardblock-desc-icon-down {
+    color: green; /* is down always positive? */
+    font-weight: 800;
+    font-size: 1.6rem;
+    vertical-align: bottom;
+}
+
+.cardblock-descsub-icon-female {
+    color: #ff80bd;
+    font-weight: 800;
+}
+
+.cardblock-descsub-icon-male {
+    color: #80b5fe;
+    font-weight: 800;
+}
+
+.cardblock-descsub-icon-hourglass {
+    font-weight: 800;
+}
+
+.kpi-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 4px 6px 0 rgba(100,100,100,0.2);
+    border-radius: 7px;
+}
+.kpi-icon {
+    color: #142E7B;
+    font-size: 2 rem;
+    margin-top: 0;
+    margin-bottom: 1px;    
+    font-weight: 400;
+    max-width: 100%;
+}
+
+.kpi-value {
+    color: #142E7B;
+    font-size: 2.1rem;
+    font-weight: 500;
+    margin-bottom: 1px;    
+}
+
+.kpi-description {
+    text-align: center;
+    font-size: 1rem;
+    padding: 2px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+/* TABS */
+.tabs {
+    margin: 1em; /* Adds lots of space around the tabs, to avoid the border to fall into the tab content area */
+}
+.tab {
+    padding: 10px 20px; /* Gives some space to tab titles */
+    color: gray; /* Colors the text in gray */
+}
+/* Only visible when the mouse is on a tab title */
+.tab:hover {
+    color: black; /* Colors the text in black to highlight the possible selection */
+    text-decoration: none; /* Removes the hyperlink underline style */
+}
+.activetab {
+    color: black; /* Colors the text in black */
+    border-bottom: 3px solid #2d2d2d; /* Underlines the text with a bold dark border */
+}
+
+/* OBSERVAROTRY v1 */
+/* used on 3 datasets */
+.description {
+    margin: 0;
+    color: grey;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+.kpi {
+    font-size: 3em;
+    margin-top: 40px;
+    font-weight: 400;
+    text-align: center;
+}
+
+
